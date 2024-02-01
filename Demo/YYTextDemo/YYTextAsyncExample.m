@@ -120,11 +120,7 @@
     
     
     UIView *toolbar;
-    if ([UIVisualEffectView class]) {
-        toolbar = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight]];
-    } else {
-        toolbar = [UIToolbar new];
-    }
+    toolbar = [UIToolbar new];
     toolbar.size = CGSizeMake(kScreenWidth, 40);
     toolbar.top = kiOS7Later ? 64 : 0;
     [self.view addSubview:toolbar];
