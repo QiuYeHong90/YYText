@@ -24,7 +24,8 @@
 
 - (instancetype)init {
     self = [super init];
-    NSString *pattern = @"[-_a-zA-Z@\\.]+[ ,\\n]";
+//    NSString *pattern = @"[-_a-zA-Z@\\.]+[ ,\\n]";
+    NSString *pattern = @"@[\\w]+\\s|#[\\w]+\\s";
     self.regex = [[NSRegularExpression alloc] initWithPattern:pattern options:kNilOptions error:nil];
     return self;
 }
@@ -62,7 +63,7 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     
-    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:@"sjobs@apple.com, apple@apple.com, banana@banana.com, pear@pear.com "];
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:@"这是一条@张三的微博 和#一个话题"];
     text.yy_font = [UIFont systemFontOfSize:17];
     text.yy_lineSpacing = 5;
     text.yy_color = [UIColor blackColor];
