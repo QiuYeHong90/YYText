@@ -329,6 +329,9 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 
+- (YYTextHighlight *)_getHighlightAtPoint:(CGPoint)point range:(NSRangePointer)range;
+
+
 @end
 
 
