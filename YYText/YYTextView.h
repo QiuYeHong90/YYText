@@ -344,7 +344,7 @@ NS_ASSUME_NONNULL_BEGIN
  you may set the accessory view's height. It may used by auto scroll calculation.
  */
 @property (nonatomic) CGFloat extraAccessoryViewHeight;
-- (YYTextHighlight *)_getHighlightAtPoint:(CGPoint)point range:(NSRangePointer)range;
+- (nullable YYTextHighlight * )_getHighlightAtPoint:(CGPoint)point range:(NSRangePointer)range;
 @end
 
 
