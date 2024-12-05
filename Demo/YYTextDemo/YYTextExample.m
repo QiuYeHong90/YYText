@@ -33,6 +33,7 @@
     [self addCell:@"Undo and Redo" class:@"YYTextUndoRedoExample"];
     [self addCell:@"Ruby Annotation" class:@"YYTextRubyExample"];
     [self addCell:@"Async Display" class:@"YYTextAsyncExample"];
+    [self addCell:@"AutoLayout 自动布局" class:@"TestYYTextLayout"];
     [self.tableView reloadData];
 }
 
