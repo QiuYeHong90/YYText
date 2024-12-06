@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		71B71A1E2D01A077009F995D /* TestYYTextLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B71A1C2D01A077009F995D /* TestYYTextLayout.m */; };
 		71B71A1F2D01A077009F995D /* TestYYTextLayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B71A1D2D01A077009F995D /* TestYYTextLayout.xib */; };
-		71B71A222D01A0EB009F995D /* SHYYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B71A212D01A0EB009F995D /* SHYYLabel.m */; };
+		71B71A222D01A0EB009F995D /* SHLayoutYYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B71A212D01A0EB009F995D /* SHLayoutYYLabel.m */; };
 		71B71A272D01B0EA009F995D /* SHYYlTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B71A252D01B0EA009F995D /* SHYYlTableViewCell.m */; };
 		71B71A282D01B0EA009F995D /* SHYYlTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B71A262D01B0EA009F995D /* SHYYlTableViewCell.xib */; };
 		D91054861F3735D20007F224 /* Animated image support.txt in Resources */ = {isa = PBXBuildFile; fileRef = D910547B1F3735D20007F224 /* Animated image support.txt */; };
@@ -90,8 +90,8 @@
 		71B71A1B2D01A077009F995D /* TestYYTextLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestYYTextLayout.h; sourceTree = "<group>"; };
 		71B71A1C2D01A077009F995D /* TestYYTextLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestYYTextLayout.m; sourceTree = "<group>"; };
 		71B71A1D2D01A077009F995D /* TestYYTextLayout.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestYYTextLayout.xib; sourceTree = "<group>"; };
-		71B71A202D01A0EB009F995D /* SHYYLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHYYLabel.h; sourceTree = "<group>"; };
-		71B71A212D01A0EB009F995D /* SHYYLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHYYLabel.m; sourceTree = "<group>"; };
+		71B71A202D01A0EB009F995D /* SHLayoutYYLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHLayoutYYLabel.h; sourceTree = "<group>"; };
+		71B71A212D01A0EB009F995D /* SHLayoutYYLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHLayoutYYLabel.m; sourceTree = "<group>"; };
 		71B71A242D01B0EA009F995D /* SHYYlTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHYYlTableViewCell.h; sourceTree = "<group>"; };
 		71B71A252D01B0EA009F995D /* SHYYlTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHYYlTableViewCell.m; sourceTree = "<group>"; };
 		71B71A262D01B0EA009F995D /* SHYYlTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SHYYlTableViewCell.xib; sourceTree = "<group>"; };
@@ -289,6 +289,8 @@
 				D91054BE1F3735E50007F224 /* YYText.h */,
 				D91054BF1F3735E50007F224 /* YYTextView.h */,
 				D91054C01F3735E50007F224 /* YYTextView.m */,
+				71B71A202D01A0EB009F995D /* SHLayoutYYLabel.h */,
+				71B71A212D01A0EB009F995D /* SHLayoutYYLabel.m */,
 			);
 			name = YYText;
 			path = ../YYText;
@@ -474,8 +476,6 @@
 				D91055021F37367B0007F224 /* YYTextAsyncExample.m */,
 				D91055301F3736910007F224 /* Resources */,
 				D91054DF1F3736130007F224 /* Supporting Files */,
-				71B71A202D01A0EB009F995D /* SHYYLabel.h */,
-				71B71A212D01A0EB009F995D /* SHYYLabel.m */,
 			);
 			path = YYTextDemo;
 			sourceTree = "<group>";
@@ -569,7 +569,7 @@
 				D91054FC1F3736700007F224 /* UIImage+YYWebImage.m in Sources */,
 				D91054D11F3735E50007F224 /* UIPasteboard+YYText.m in Sources */,
 				D91054F61F3736700007F224 /* CALayer+YYAdd.m in Sources */,
-				71B71A222D01A0EB009F995D /* SHYYLabel.m in Sources */,
+				71B71A222D01A0EB009F995D /* SHLayoutYYLabel.m in Sources */,
 				D91054D01F3735E50007F224 /* NSParagraphStyle+YYText.m in Sources */,
 				D91054FD1F3736700007F224 /* UIView+YYAdd.m in Sources */,
 				D91054D51F3735E50007F224 /* YYTextUtilities.m in Sources */,

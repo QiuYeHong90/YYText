@@ -19,19 +19,7 @@
     
 }
 
--(CGSize)intrinsicContentSize {
-    CGSize size = [super intrinsicContentSize];
-    NSLog(@"intrinsicContentSize----%@",NSStringFromCGSize(size));
-    return  size;
-}
 
-- (CGSize)systemLayoutSizeFittingSize:(CGSize)targetSize withHorizontalFittingPriority:(UILayoutPriority)horizontalFittingPriority verticalFittingPriority:(UILayoutPriority)verticalFittingPriority
-{
-    self.yyLabel.preferredMaxLayoutWidth = targetSize.width;
-    CGSize size = [super systemLayoutSizeFittingSize:targetSize withHorizontalFittingPriority:horizontalFittingPriority verticalFittingPriority:verticalFittingPriority];
-    NSLog(@"systemLayoutSizeFittingSize targetSize----%@",NSStringFromCGSize(targetSize));
-    return  size;
-}
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

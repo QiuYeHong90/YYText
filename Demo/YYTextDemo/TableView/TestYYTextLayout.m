@@ -7,7 +7,7 @@
 //
 
 #import "SHYYlTableViewCell.h"
-#import "SHYYLabel.h"
+#import "SHLayoutYYLabel.h"
 #import "TestYYTextLayout.h"
 
 @interface TestYYTextLayout ()<UITableViewDataSource>

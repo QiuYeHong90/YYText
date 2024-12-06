@@ -18,20 +18,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96h-BL-bbg" customClass="SHYYLabel">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96h-BL-bbg" customClass="SHLayoutYYLabel">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="preferredMaxLayoutWidth">
-                                <real key="value" value="0.0"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="96h-BL-bbg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Wio-gg-9af"/>
                     <constraint firstAttribute="trailing" secondItem="96h-BL-bbg" secondAttribute="trailing" id="bPY-09-kZA"/>
-                    <constraint firstAttribute="bottom" secondItem="96h-BL-bbg" secondAttribute="bottom" id="eBr-db-Sea"/>
+                    <constraint firstAttribute="bottom" secondItem="96h-BL-bbg" secondAttribute="bottom" constant="10" id="eBr-db-Sea"/>
                     <constraint firstItem="96h-BL-bbg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="g2y-pv-7Tj"/>
                 </constraints>
             </tableViewCellContentView>

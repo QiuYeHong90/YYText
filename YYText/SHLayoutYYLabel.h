@@ -1,5 +1,5 @@
 //
-//  SHYYLabel.h
+//  SHLayoutYYLabel.h
 //  YYTextDemo
 //
 //  Created by Ray on 2024/12/5.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SHYYLabel : YYLabel
+@interface SHLayoutYYLabel : YYLabel
 
 @end
 

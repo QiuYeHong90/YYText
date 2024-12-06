@@ -6,13 +6,13 @@
 //  Copyright © 2024 ibireme. All rights reserved.
 //
 
-#import "SHYYLabel.h"
+#import "SHLayoutYYLabel.h"
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SHYYlTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet SHYYLabel *yyLabel;
+@property (weak, nonatomic) IBOutlet SHLayoutYYLabel *yyLabel;
 
 @end
 
