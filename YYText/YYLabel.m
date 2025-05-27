@@ -533,10 +533,10 @@ static dispatch_queue_t YYLabelGetReleaseQueue() {
     _highlight = [self _getHighlightAtPoint:point range:&_highlightRange];
     _highlightLayout = nil;
     _shrinkHighlightLayout = nil;
-    _state.hasTapAction = _textTapAction != nil;
+    _state.hasTapAction = (_textTapAction != nil) || (_textTapLastAction != nil);
     _state.hasLongPressAction = _textLongPressAction != nil;
     
-    if (_highlight || _textTapAction || _textLongPressAction) {
+    if (_highlight || _textTapAction || _textTapLastAction || _textLongPressAction) {
         _touchBeganPoint = point;
         _state.trackingTouch = YES;
         _state.swallowTouch = YES;
@@ -620,7 +620,22 @@ static dispatch_queue_t YYLabelGetReleaseQueue() {
                 }
             }
             [self _removeHighlightAnimated:_fadeOnHighlight];
+        } else {
+            if (!_state.touchMoved && _textTapLastAction) {
+                NSRange range = NSMakeRange(NSNotFound, 0);
+                CGRect rect = CGRectNull;
+                CGPoint point = [self _convertPointToLayout:_touchBeganPoint];
+                YYTextRange *textRange = [self._innerLayout textRangeAtPoint:point];
+                CGRect textRect = [self._innerLayout rectForRange:textRange];
+                textRect = [self _convertRectFromLayout:textRect];
+                if (textRange) {
+                    range = textRange.asRange;
+                    rect = textRect;
+                }
+                _textTapLastAction(self, _innerText, range, rect);
+            }
         }
+        
     }
     
     if (!_state.swallowTouch) {

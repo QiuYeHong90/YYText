@@ -23,7 +23,6 @@ typedef void(^SHLinkTypeYYTextAction)(UIView *containerView, NSString *text, NST
  used to modify the original attributes in the range.
  */
 @property (nullable, nonatomic, copy) NSDictionary<NSString *, id> *linkTextAttributes;
-
 @property (nullable, nonatomic, copy) SHLinkTypeYYTextAction defaultLinkTap;
 
 @property (nonatomic) UIDataDetectorTypes dataDetectorTypes;

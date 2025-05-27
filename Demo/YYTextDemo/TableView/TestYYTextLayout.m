@@ -47,7 +47,7 @@
     NSInteger count = indexPath.item + 1;
     NSString * text = @"";
     for (int i = 0; i < count; i++) {
-        text = [NSString stringWithFormat:@"%@%@",text,@"你好先生----- https://www.tiktok.com/@aurapurabr?_t=ZM-8wh3ubMnwEq&_r=1 "];
+        text = [NSString stringWithFormat:@"%@%@",text,@"你好先生-----你好先生-----你好先生-----你好先生-----你好先生-----你好先生-----你好先生----- https://www.tiktok.com/@aurapurabr?_t=ZM-8wh3ubMnwEq&_r=1 "];
     }
     NSMutableAttributedString * newText = [[NSMutableAttributedString alloc] initWithString:text];
     

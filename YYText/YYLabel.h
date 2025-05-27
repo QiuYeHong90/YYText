@@ -215,6 +215,7 @@ NS_ASSUME_NONNULL_BEGIN
  The default value is nil.
  */
 @property (nullable, nonatomic, copy) YYTextAction textTapAction;
+@property (nullable, nonatomic, copy) YYTextAction textTapLastAction;
 
 /**
  When user long press the label, this action will be called (similar to long press gesture).
@@ -368,6 +369,7 @@ IB_DESIGNABLE
 @property (nullable, nonatomic, copy) id<YYTextLinePositionModifier> linePositionModifier;
 @property (nonnull, nonatomic, copy) YYTextDebugOption *debugOption;
 @property (nullable, nonatomic, copy) YYTextAction textTapAction;
+@property (nullable, nonatomic, copy) YYTextAction textTapLastAction;
 @property (nullable, nonatomic, copy) YYTextAction textLongPressAction;
 @property (nullable, nonatomic, copy) YYTextAction highlightTapAction;
 @property (nullable, nonatomic, copy) YYTextAction highlightLongPressAction;

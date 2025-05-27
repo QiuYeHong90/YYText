@@ -35,6 +35,9 @@
                 break;
         }
     };
+    self.yyLabel.textTapLastAction = ^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+        NSLog(@"text1---==%@",text);
+    };
 }
 
 
