@@ -47,9 +47,12 @@
     NSInteger count = indexPath.item + 1;
     NSString * text = @"";
     for (int i = 0; i < count; i++) {
-        text = [NSString stringWithFormat:@"%@%@",text,@"你好先生-----"];
+        text = [NSString stringWithFormat:@"%@%@",text,@"你好先生----- https://www.tiktok.com/@aurapurabr?_t=ZM-8wh3ubMnwEq&_r=1 "];
     }
-    cell.yyLabel.text = text;
+    NSMutableAttributedString * newText = [[NSMutableAttributedString alloc] initWithString:text];
+    
+    newText = [cell.yyLabel detectText:newText];
+    cell.yyLabel.attributedText = newText;
     
     return  cell;
 }
