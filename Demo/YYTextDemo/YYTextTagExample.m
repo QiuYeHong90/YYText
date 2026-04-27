@@ -22,6 +22,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     if ([self respondsToSelector:@selector(setAutomaticallyAdjustsScrollViewInsets:)]) {
         self.automaticallyAdjustsScrollViewInsets = NO;
+        
     }
     
     NSMutableAttributedString *text = [NSMutableAttributedString new];
@@ -44,7 +45,7 @@
         UIColorHex(cd8ddf),
         UIColorHex(a4a4a7)
     ];
-
+    
     UIFont *font = [UIFont boldSystemFontOfSize:16];
     for (int i = 0; i < tags.count; i++) {
         NSString *tag = tags[i];
@@ -78,7 +79,8 @@
     YYTextView *textView = [YYTextView new];
     textView.attributedText = text;
     textView.size = self.view.size;
-    textView.textContainerInset = UIEdgeInsetsMake(10 + 64, 10, 10, 10);
+    
+    
     textView.allowsCopyAttributedString = YES;
     textView.allowsPasteAttributedString = YES;
     textView.delegate = self;
@@ -91,12 +93,17 @@
     textView.selectedRange = NSMakeRange(text.length, 0);
     [self.view addSubview:textView];
     self.textView = textView;
+    textView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [textView becomeFirstResponder];
     });
 }
-
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews ];
+    
+    self.textView.textContainerInset = UIEdgeInsetsMake(self.view.safeAreaInsets.top + 10, 10, 10, 10);
+}
 - (void)edit:(UIBarButtonItem *)item {
     if (_textView.isFirstResponder) {
         [_textView resignFirstResponder];

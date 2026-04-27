@@ -177,7 +177,11 @@
     }];
     [imageView addGestureRecognizer:g];
 }
-
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews ];
+    
+    self.textView.textContainerInset = UIEdgeInsetsMake(self.view.safeAreaInsets.top, 10, 10, 10);
+}
 - (void)edit:(UIBarButtonItem *)item {
     if (_textView.isFirstResponder) {
         [_textView resignFirstResponder];
