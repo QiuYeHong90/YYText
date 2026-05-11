@@ -1,9 +1,10 @@
-// swift-tools-version:5.8
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "YYText",
-    platforms: [.iOS(.v13)],
+    defaultLocalization: "en",
+    platforms: [.iOS(.v12)],
     products: [
         .library(name: "YYText", targets: ["YYText"])
     ],
@@ -11,7 +12,17 @@ let package = Package(
         .target(
             name: "YYText",
             path: "YYText",
-            publicHeadersPath: "",
+            sources: nil,
+            publicHeadersPath: nil,
+            cSettings: [
+                .headerSearchPath("."),
+                .headerSearchPath("Component"),
+                .headerSearchPath("Utility"),
+                .headerSearchPath("String"),
+                .headerSearchPath("Async"),
+                .headerSearchPath("Parser"),
+                .headerSearchPath("Attribute")
+            ],
             linkerSettings: [
                 .linkedFramework("UIKit"),
                 .linkedFramework("CoreText"),
