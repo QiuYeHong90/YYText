@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "YYText",
-    platforms: [.iOS(.v12)],
+    platforms: [.iOS(.v13)],
     products: [
         .library(name: "YYText", targets: ["YYText"])
     ],
@@ -11,7 +11,7 @@ let package = Package(
         .target(
             name: "YYText",
             path: "YYText",
-            publicHeadersPath: ".",
+            publicHeadersPath: "",
             linkerSettings: [
                 .linkedFramework("UIKit"),
                 .linkedFramework("CoreText"),
