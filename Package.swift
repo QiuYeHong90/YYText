@@ -12,8 +12,7 @@ let package = Package(
         .target(
             name: "YYText",
             path: "YYText",
-            sources: nil,
-            publicHeadersPath: nil,
+            publicHeadersPath: nil, // ✅ 这里修复了
             cSettings: [
                 .headerSearchPath("."),
                 .headerSearchPath("Component"),
