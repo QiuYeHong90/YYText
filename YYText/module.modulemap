@@ -1,0 +1,4 @@
+module YYText {
+    header "YYText.h"
+    export *
+}
